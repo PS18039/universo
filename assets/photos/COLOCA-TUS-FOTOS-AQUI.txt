@@ -1,0 +1,7 @@
+Agrega tus fotos con estos nombres exactos:
+
+tierra-01.jpg
+saturno-01.jpg
+saturno-02.jpg
+
+Si todavía no existen, la experiencia se mantiene funcionando con espacios elegantes para reemplazarlos.

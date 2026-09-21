@@ -1,0 +1,3 @@
+Coloca en esta carpeta tu archivo de audio autorizado y nómbralo exactamente: cancion.mp3
+
+La página ya está configurada para cargar: /audio/cancion.mp3

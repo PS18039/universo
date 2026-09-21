@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b0804" />
+  <meta name="description" content="Una experiencia cósmica interactiva para explorar con calma." />
+  <link rel="preload" as="image" href="images/nebula-cinematic.webp" type="image/webp" />
+  <link rel="modulepreload" href="js/three.module.min.js" />
+  <title>Un universo</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/interaction.css" />
+  <link rel="stylesheet" href="css/real-ui.css" />
+</head>
+<body>
+  <main id="app" aria-label="Un universo">
+    <canvas id="universe" aria-hidden="true"></canvas>
+    <div class="cosmic-shimmer" aria-hidden="true"></div>
+
+    <section id="cover" class="cover" aria-labelledby="cover-title">
+      <p class="eyebrow">ALGO ESPECIAL COMIENZA AQUÍ</p>
+      <h1 id="cover-title">UN UNIVERSO</h1>
+      <div class="cover-orbit" aria-hidden="true"><span></span></div>
+      <p class="intro">No es el destino. No es el camino. Es la persona.</p>
+      <button id="explore" class="explore" type="button"><span>EXPLORAR ESTE UNIVERSO</span></button>
+    </section>
+    <nav id="orbitLabels" class="orbit-labels" aria-label="Mundos del universo"></nav>
+
+    <aside class="hud" aria-label="Controles de la experiencia">
+      <button id="music" class="round-control" type="button" aria-label="Activar música"><svg class="sound-wave paused" viewBox="0 0 32 24" aria-hidden="true"><path d="M3 12h2M8 8v8M13 4v16M18 7v10M23 3v18M28 9v6"/></svg><small>MÚSICA<br>OFF</small></button>
+      <div id="progress" class="progress" aria-label="Mundos explorados"></div>
+    </aside>
+
+    <section id="planetPanel" class="planet-panel" aria-live="polite" hidden>
+      <button id="closePanel" class="panel-close" type="button" aria-label="Cerrar y volver a ver el universo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
+      <div id="worldOrnament" class="world-ornament" aria-hidden="true"></div>
+      <p id="worldKicker" class="world-kicker"></p>
+      <h2 id="worldTitle"></h2>
+      <p id="worldText"></p>
+      <p id="worldSubtext" class="world-subtext"></p>
+      <div id="photoSlots" class="photo-slots"></div>
+      <button id="return" class="vector-action" type="button">CONTINUAR EXPLORANDO</button>
+    </section>
+
+    <section id="secret" class="secret" hidden>
+      <div class="pluto-unlock" aria-hidden="true"><svg viewBox="0 0 56 56"><circle class="unlock-track" cx="28" cy="28" r="20"/><circle class="unlock-complete" cx="28" cy="28" r="20"/><circle class="unlock-point" cx="28" cy="8" r="2"/></svg></div>
+      <p><strong>8/8 MUNDOS DESCUBIERTOS</strong><br>Algo muy lejano acaba de despertar…<br><span>PLUTÓN DESBLOQUEADO</span></p>
+      <button id="goPluto" class="vector-action" type="button">VIAJAR A PLUTÓN</button>
+    </section>
+
+    <section id="lunarSecret" class="lunar-secret" hidden aria-live="polite">
+      <article class="lunar-card">
+        <button id="closeLunar" class="lunar-close" type="button" aria-label="Cerrar mensaje de la Luna"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
+        <h2>LA LUNA</h2>
+        <div class="lunar-copy">
+          <p>No sé dónde estaremos cuando algún día volvamos a recordar todo esto.</p>
+          <p>Quizá muchas cosas hayan cambiado.<br>Quizá nosotros también.</p>
+          <p>Pero hubo un tiempo en el que coincidimos, nos reímos, hablamos de todo y de nada, y vivimos pequeños momentos que probablemente nadie más entendería como nosotros.</p>
+          <p class="lunar-emphasis">Y qué bonito que nos haya tocado vivirlos juntos.</p>
+          <p>Por eso quise dejar algo nuestro aquí, lejos de todo, escondido en la Luna.</p>
+          <p>No para prometer que nada va a cambiar,</p>
+          <p>sino para que, aunque cambie,</p>
+          <p class="lunar-closing">siempre exista un pequeño lugar en este universo donde tú y yo sigamos siendo exactamente quienes fuimos en este momento.</p>
+        </div>
+      </article>
+    </section>
+
+    <section id="supernova" class="supernova" hidden aria-hidden="true"><div class="nova-nebula"></div><div class="nova-core"></div><div class="nova-wave"></div><div class="nova-wave second"></div><div class="nova-particles"></div></section>
+
+    <section id="final" class="final" hidden aria-live="polite">
+      <div class="flowers" aria-hidden="true"></div>
+      <div class="final-copy">
+        <p class="final-date">21 DE SEPTIEMBRE</p>
+        <figure class="final-image"><img src="images/final-flores.webp" alt="Flores amarillas bajo una luz dorada en un paisaje cósmico" width="900" height="600" loading="lazy" decoding="async"></figure>
+        <p>Que nunca te falten flores, motivos para sonreír y personas que quieran verte feliz.</p>
+        <p>No necesitaba ser 21 de septiembre… pero tú tampoco tenías por qué quedarte sin tus flores amarillas.</p>
+        <h2>Qué bonito fue coincidir contigo.</h2>
+        <p>Gracias por formar parte de una etapa bonita de mi vida.</p>
+        <p class="dedication">Para Mayra</p>
+        <button id="restart" class="vector-action" type="button">VOLVER A RECORRER NUESTRO UNIVERSO</button>
+      </div>
+    </section>
+  </main>
+  <audio id="soundtrack" preload="none" src="audio/cancion.mp3"></audio>
+  <script type="module" src="js/app3d.js"></script>
+</body>
+</html>
